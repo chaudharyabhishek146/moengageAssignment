@@ -9,6 +9,7 @@ import AppLayout from "../components/AppLayout"
 import ResponseCodeCard from "../components/CodeCard"
 import { useLists } from "../contexts/ListContext"
 import Modal from "react-modal"
+import { Link } from "react-router-dom"
 
 // Set app element for accessibility
 Modal.setAppElement("#root")
@@ -144,9 +145,10 @@ const ListsPage = () => {
           <div className="text-center py-12">
             <h3 className="text-lg font-medium">No saved lists yet</h3>
             <p className="text-muted mt-1 mb-4">Go to the search page to create your first list</p>
-            <a href="/search" className="btn btn-primary">
+            <Link to="/search"><a  className="btn btn-primary">
               Go to Search
             </a>
+            </Link>
           </div>
         ) : (
           <div className="mb-6">
@@ -226,7 +228,7 @@ const ListsPage = () => {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div className="flex flex-wrap gap-4">
                   {activeList.codes.map((code) => (
                     <ResponseCodeCard key={code} code={code} description={httpCodes[code] || "Unknown Status Code"} />
                   ))}
