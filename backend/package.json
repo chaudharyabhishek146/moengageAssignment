@@ -3,12 +3,16 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+   
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "build": "echo 'No build required for backend'",
+    "prestart": "npm install",
+    "postinstall": "npm run build"
   },
   "author": "abhishek chaudhary",
   "license": "ISC",
-  "description": "MoEngaege Assignment",
+  "description": "MoEngaege Assignment Express.js backend for HTTP Response Code Image Finder",
   "dependencies": {
     "axios": "^1.8.1",
     "bcryptjs": "^3.0.2",

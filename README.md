@@ -53,13 +53,17 @@ Open MongoDB Compass and check the database.
 
 🏃 Running the Application
 
-1️⃣ Start Backend
+1️⃣ Start Backend for Production
 cd backend
-npm run dev
-
-2️⃣ Start Frontend
-cd frontend
+npm install
 npm start
+
+2️⃣ Start Frontend Production
+cd app
+npm install
+npm run build
+npm run deploy
+Serves the React production build.
 
 🚀 Open your browser and go to: http://localhost:3000
 
